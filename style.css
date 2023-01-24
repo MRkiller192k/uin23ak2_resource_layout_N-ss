@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+:root {
+    --red: #da291c;
+    --yellow: #ffd700;
+    --blue: #00ced1;
+    --green: #00af4d;
+    --white: #ffffff;
+    --black: #4a4545;
+    --maxwidth: 1200px;
+}
+
+body{
+    height: 100%;
+    margin: 3%;
+    font-family: Arial;
+  }
+  
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-style: groove;
+    
+}
+div.container{
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+
+nav{
+   position: relative;
+   left: -3%;
+   width: 100%;
+   background-color: var(--with);
+   display: flex;
+ 
+    
+}
+nav button:hover{
+    color: var(--black);
+    border-color: var(--blue);
+    background: var(--blue);
+}
+
+nav button{
+color: var(--black);
+border-style: groove;
+text-decoration: none;
+border-bottom: 5px solid var(--blue);
+display: inline-block;
+padding: .5rem 1rem;
+text-transform: uppercase;
+
+}
+
+
+.MenuItem:hover .open{
+    position: fixed;
+    top: auto;
+    display: block;
+    padding: 1rem;
+    border-style: groove;
+    width: 75.54%;
+   
+  }
+  #subMenu{
+    display: flex;
+    flex-direction: column;
+}
+  div.open{
+    display: none;
+}
