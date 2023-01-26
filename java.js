@@ -1,6 +1,6 @@
 const resources = [
     {
-        category: "KATEGORI 1",
+        category: "HTML",
         text1:"HTML",
         text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
         sources: [
@@ -19,7 +19,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 2",
+        category: "CSS",
         text1: "CSS",
         text: "CSS står for Cascading StyleSheets, og brukes for å sette stilregler på HTML-elementer.",
         sources: [
@@ -42,7 +42,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 3",
+        category: "JAVASCRIPT",
         text1: "JavaScript",
         text: "JavaScript er et scriptspråk basert på EcmaScript. JavaScript kjører direkte i nettleseren, og brukes ofte til å manipulere HTML og CSS i webgrensnesnitt.",
         sources: [
@@ -61,7 +61,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 4",
+        category: "REACT",
         text1: "React",
         text: "React er et rammeverk bygget i JavaScript. React bruker komponenter og states for å lage en levende frontend.",
         sources: [
@@ -80,7 +80,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 5",
+        category: "SANITY",
         text1: "Sanity",
         text: "Sanity er et headless CMS som står for innholdsadministrasjon. Innhold hentes inn i applikasjoner via GROQ-spørringer.",
         sources: [
@@ -100,20 +100,20 @@ const resources = [
     },
 ]
 
-
+//her definere vi verdien 
 let Menu = ``;
-
+        // lager en ny array fra og kale en function for være element.
       resources.map((resources) => {
-        
+        //det som skjer her at vi henter fra array title og linken 
         let linkMenu = ``;
         resources.sources.forEach((item) => {
           linkMenu += `
         <li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
 
         });
-        
+        //her setter vi det samen og sier hvordan oppsette skal være.
         Menu += `
-        <seaction class="MenuItem">
+        <seaction class="MenuItem ">
         <button oneclick="Menu()">${resources.category}</button>
           <div class="open">
           <p class="text1">${resources.text1}</p> 
@@ -125,12 +125,13 @@ let Menu = ``;
       </seaction>`;
    
       })
-     
+     //her setter vi ut det som er i html content av et element. 
         menu.innerHTML = `
     <ul>
       
         ${Menu}
     </ul>`;
+    
 
    
 

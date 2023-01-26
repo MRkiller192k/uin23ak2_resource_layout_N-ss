@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
-    --red: #da291c;
-    --yellow: #ffd700;
     --blue: #00ced1;
-    --green: #00af4d;
     --white: #ffffff;
-    --black: #4a4545;
+    --black: #5f5f5f;
     --maxwidth: 1200px;
 }
 
@@ -16,47 +13,44 @@ body{
     font-family: Arial;
   }
   
-
 header{
+    color: var(--black);
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     border-style: groove;
     
 }
+
 div.container{
     width: 100%;
     max-width: var(--maxwidth);
     margin: 0 auto;
     background-color: var(--white);
-    overflow: hidden;
 }
-
 
 nav{
    position: relative;
-   left: -3%;
+   left: -3.3%;
    width: 100%;
    background-color: var(--with);
    display: flex;
  
     
 }
-nav button:hover{
+
+nav button:hover {
     color: var(--black);
     border-color: var(--blue);
-    background: var(--blue);
+    background-color: var(--blue);
 }
 
 nav button{
 color: var(--black);
 border-style: groove;
-text-decoration: none;
-border-bottom: 5px solid var(--blue);
-display: inline-block;
+border-bottom: 1px solid var(--blue);
 padding: .5rem 1rem;
 text-transform: uppercase;
-
 }
 
 
@@ -67,12 +61,34 @@ text-transform: uppercase;
     padding: 1rem;
     border-style: groove;
     width: 75.54%;
-   
-  }
-  #subMenu{
+    border-top:5px solid var(--blue);
+
+}
+#subMenu{
     display: flex;
     flex-direction: column;
 }
-  div.open{
+
+div.open{
     display: none;
+}
+@media screen and (max-width: 900px) {
+    nav button{
+        color: var(--black);
+        border-style: groove;
+        border-bottom: 1px solid var(--blue);
+        padding: .1rem 1rem;
+        text-transform: uppercase;
+        }
+        .MenuItem:hover .open{
+            position: fixed;
+            top: auto;
+            display: block;
+            left: 15px;
+            padding: 1rem;
+            border-style: groove;
+            width: 86.5%;
+            border-top:5px solid var(--blue);
+        
+        }
 }
